@@ -1,0 +1,21 @@
+# Build output
+build/
+sysctrace
+*.o
+*.a
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# CSV outputs from runs
+*.csv
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Benchmark temp files
+bench/tmp/
