@@ -91,14 +91,14 @@ echo "════════════════════════�
 # Syscall-bound workloads: many short syscalls, where sysctrace's
 # deferred-formatting design wins over strace's per-call formatting.
 
-run_workload "find / (3 levels deep)" \
-  "find / -maxdepth 3 -type f 2>/dev/null | head -2000 > /dev/null"
+run_workload "find / (5 levels deep)" \
+  "find / -maxdepth 5 -type f 2>/dev/null | head -2000 > /dev/null"
 
 run_workload "tar /usr/include" \
   "tar -cf $TMPFILE/out.tar /usr/include 2>/dev/null"
 
 run_workload "stat 2000 files" \
-  "find /usr/lib -maxdepth 2 -type f 2>/dev/null | head -2000 | xargs -r stat > /dev/null"
+  "find /usr/lib -maxdepth 2 -type f 2>/dev/null | head -10000 | xargs -r stat > /dev/null"
 
 echo ""
 echo "═══════════════════════════════════════════════"
