@@ -38,7 +38,7 @@ typedef struct {
     int          verbose;
     int          quiet;
     const char  *csv_prefix;
-    int          sep;        /* index of "--" in argv, or -1 */
+    int          sep;
 } cli_opts_t;
 
 static int parse_opts(int argc, char **argv, cli_opts_t *opts) {
